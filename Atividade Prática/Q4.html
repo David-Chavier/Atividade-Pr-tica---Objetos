@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4</title>
+</head>
+<body>
+    <script>
+        
+        //         4. Crie cinco objetos JavaScript dentro de um Array contendo
+        // nome(texto), idade(número), skills (array), ou seja um total de cinco
+
+        // alunos. Agora crie uma função que receba estes cinco objetos e
+        // mais um parâmetro skill. Dependendo da skill enviada mostrar no
+        // console.log(), quais alunos têm a skill enviada por parâmetro,
+        // mostrar todo o objeto.
+        // Exemplo: Pedro, 24, [JavaScript, TypeScript, React]. Se mandar
+        // chamar a função enviando (alunos, “JavaScript”), precisa mostrar o
+        // Pedro e qual mais se encaixa nessa skill.
+
+
+        const aluno1 = {
+            nome: 'David',
+            idade: 22,
+            skills:['js', 'css', 'html']
+        }
+        const aluno2 = {
+            nome: 'Rafael',
+            idade: 23,
+            skills:['python', 'css', 'html']
+        }
+        const aluno3 = {
+            nome: 'João',
+            idade: 22,
+            skills:['python', 'css', 'js']
+        }
+        const aluno4 = {
+            nome: 'Lissandra',
+            idade: 25,
+            skills:['js', 'python', 'html']
+        }
+        const aluno5 = {
+            nome: 'Zed',
+            idade: 22,
+            skills:['python', 'css', 'java']
+        }
+
+        let turma = [aluno1, aluno2, aluno3, aluno4, aluno5]
+
+        const skill = prompt('Filtrar alunos por skill.')
+
+        function filtro(skill){
+
+          let filte = turma.filter((value) => value.skills.includes(skill))
+          
+          if(filte.length > 0){
+            return filte = turma.filter((value) => value.skills.includes(skill))
+          }else{
+            return 'Nenhum aluno cadastrado possui esta skill.'
+          }
+
+        }
+
+        console.log(filtro(skill))
+
+    </script>
+</body>
+</html>
